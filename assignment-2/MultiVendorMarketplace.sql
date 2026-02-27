@@ -3,7 +3,7 @@ CREATE DATABASE MultiVendorMarketplace;
 --active the database MultiVendorMarketplace
 USE MultiVendorMarketplace;
                                -- answer 1 Entities/table 1-13(at least 10)
-                               --  table shown in bellow
+                               --  table shown in bellow (various places)
 /*
 1. SubscriptionPlan (PlanID, PlanName, MonthlyFee, ProductLimit, CommissionPercent, Features)
 2. Vendor (VendorID, BusinessName, OwnerName, Email, Phone, Address, VATNumber, JoinDate, Status, PlanID)
@@ -299,6 +299,7 @@ WITH VendorSales AS (
 SELECT *,
        RANK() OVER (ORDER BY TotalSales DESC) AS SalesRank
 FROM VendorSales;
+
 
 
 
